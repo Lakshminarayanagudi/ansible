@@ -13,3 +13,8 @@
   - name: print exit staatus or return code
     ansible.builtin.debug:
       msg: "status is: {{user.rc}}"
+
+  - name: create user
+    absible.builtin.user:
+      name: roboshop
+    When: User.rc != 0 # condition
