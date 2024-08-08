@@ -1,5 +1,5 @@
 - name: conditions
-  hostsd: localhost
+  hosts: localhost
   tasks:
   - name: check robohsop user eorxits or not
     ansible.builtin.command: id robohsop
