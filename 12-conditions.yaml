@@ -1,0 +1,10 @@
+- name: conditions
+  hostsd: localhost
+  tasks:
+  - name: check robohsop user eorxits or not
+    ansible.builtin.command: id robohsop
+    register: user # user is a variable name
+
+  - name: print variable value
+    ansible.builtin.debug:
+      msg: "User output is: {{user}}"
