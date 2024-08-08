@@ -1,5 +1,6 @@
 - name: conditions
   hosts: localhost
+  become: yes
   tasks:
   - name: check robohsop user eorxits or not
     ansible.builtin.command: id robohsop
@@ -15,6 +16,6 @@
       msg: "status is: {{user.rc}}"
 
   - name: create user
-    absible.builtin.user:
+    ansible.builtin.user:
       name: roboshop
     When: User.rc != 0 # condition
